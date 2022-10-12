@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {I18nProvider} from 'react-aria';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <I18nProvider locale='fr-FR'>
+      <App />
+    </I18nProvider>
   </React.StrictMode>
 );
 

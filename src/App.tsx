@@ -1,8 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { useLocale } from 'react-aria';
+
 
 function App() {
+  // let { locale, direction } = useLocale();
+
   return (
     <div className="App">
       <header className="App-header">
