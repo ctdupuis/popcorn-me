@@ -7,7 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Can use this to hold color combos to be reused throughout the app */
+:root {
+  --primary: rgb(16, 185, 197);
+  --secondary: rgb(0, 0, 0);
 }
