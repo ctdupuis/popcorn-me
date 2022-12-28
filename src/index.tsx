@@ -1,18 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import {I18nProvider} from 'react-aria';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import MovieList from "./components/movies/MovieList";
+import Auth from "./components/auth/Auth";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "movies",
+        element: <MovieList />
+      },
+      {
+        path: "auth",
+        element: <Auth />
+      }
+    ]
+  },
+])
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <I18nProvider locale='fr-FR'>
-      <App />
-    </I18nProvider>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
